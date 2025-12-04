@@ -6,7 +6,7 @@
     <link rel="icon" href="/img/logo/favicon.svg" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/login.css" />
-    <title>판다마켓 - 로그인</title>
+    <title>판다마켓 - 회원가입</title>
   </head>
   <body>
     <div id="wrap" class="login_wrapper">
@@ -16,12 +16,19 @@
      <form>
        <label for="email">이메일</label>
        <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요" autocomplete required>
+       <label for="nickName">닉네임</label>
+       <input type="text" name="nickName" id="nickName" placeholder="닉네임을 입력해주세요" autocomplete required>
        <label for="password">비밀번호</label>
        <div class="password_input">
-         <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" required>
-         <div class="eyes"><i class="eyes_on"></i></div>
+        <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" required>
+        <div class="eyes"><i class="eyes_on"></i></div>
        </div>
-       <button type="submit">로그인</button>
+       <label for="password_check">비밀번호 확인</label>
+       <div class="password_input pw_check">
+        <input type="password" name="password_check" id="password_check" placeholder="비밀번호를 다시 한 번 입력해주세요" required>
+        <div class="eyes pw_check_eyes"><i class="eyes_on"></i></div>
+       </div>
+       <button type="submit">회원가입</button>
      </form>
  
      <div class="sns_login">
@@ -41,8 +48,8 @@
      </div>
      
      <div class="singup">
-       판다마켓이 처음이신가요?
-       <a href="/signIn.html">회원가입</a>
+       이미 회원이신가요?
+       <a href="/login.html">로그인</a>
      </div>
     </div>
   </body>
