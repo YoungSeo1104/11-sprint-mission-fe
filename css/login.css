@@ -2,12 +2,12 @@ body {
   background: #fff;
 }
 
-#wrap.login_wrapper {
+.wrap.login_wrapper {
   max-width: 640px;
   margin: 231px auto 284px auto;
 }
 
-#wrap.login_wrapper .login_logo {
+.wrap.login_wrapper .login_logo {
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@ body {
   margin: 0 0 40px 0;
 }
 
-#wrap.login_wrapper .login_logo img {
+.wrap.login_wrapper .login_logo img {
   width: 100%;
   max-width: 396px;
 }
