@@ -116,7 +116,7 @@ main .contents.bottom article {
   padding: 0 0 60px 0;
 }
 
-.no_box {
+.no-box {
   width: 100%;
   height: 138px;
   background: #fcfcfc;
@@ -169,19 +169,19 @@ footer ul.icons li a {
   background-position: 50% 50%;
   font-size: 0;
 }
-li.icon_facebook a {
+li.icon-facebook a {
   background: url(/img/sns/facebook.svg);
 }
 
-li.icon_twitter a {
+li.icon-twitter a {
   background: url(/img/sns/ic_twitter.svg);
 }
 
-li.icon_youtube a {
+li.icon-youtube a {
   background: url(/img/sns/youtube.svg);
 }
 
-li.icon_instargram a {
+li.icon-instargram a {
   background: url(/img/sns/ic_instagram.svg);
 }
 
