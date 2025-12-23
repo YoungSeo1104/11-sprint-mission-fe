@@ -6,6 +6,7 @@
     <link rel="icon" href="/img/logo/favicon.svg" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>판다마켓 - 로그인</title>
   </head>
   <body>
@@ -14,14 +15,21 @@
        <img src="/img/logo/logo.svg" alt="판다마켓_로고" />
      </a><!--로고_판다마켓 --></a>
      <form>
-       <label for="email">이메일</label>
-       <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요" autocomplete required>
-       <label for="password">비밀번호</label>
-       <div class="pw-box">
-         <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" required>
-         <div class="eyes"><i class="eyes-on"></i></div>
-       </div>
-       <button type="submit">로그인</button>
+      <div class="box">
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요" required />
+        <span class="email-error error-text">잘못된 이메일 형식입니다.</span>
+      </div>
+
+      <div class="box">
+        <label for="password">비밀번호</label>
+        <div class="pw-box">
+          <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" required />
+          <div id="eyes" class="eyes"><i class="eyes-icon"></i></div>
+        </div>
+        <span class="password-error error-text">비밀번호를 8자 이상 입력해주세요</span>
+      </div>
+       <button id="login-btn" type="button" disabled>로그인</button>
      </form>
  
      <div class="sns-login">
@@ -45,5 +53,6 @@
        <a href="/signIn.html">회원가입</a>
      </div>
     </div>
+    <script type="module" src="./js/login.js"></script>
   </body>
 </html>

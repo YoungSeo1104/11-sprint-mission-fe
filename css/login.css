@@ -25,6 +25,10 @@ body {
   flex-direction: column;
 }
 
+form .box {
+  margin: 0 0 24px 0;
+}
+
 form label {
   color: var(--Secondary-800);
   font-family: Pretendard;
@@ -38,11 +42,11 @@ form label {
 form input {
   width: 640px;
   height: 56px;
+  margin: 16px 0 0 0;
   padding: 16px 24px;
   border-radius: 12px;
   background: var(--Secondary-100);
   border: 1px solid var(--Secondary-100);
-  margin: 0 0 24px 0;
   color: var(--Secondary-400);
   font-family: Pretendard;
   font-size: 1rem;
@@ -56,6 +60,22 @@ form input {
 
 form input:focus {
   border: 1px solid #3692ff;
+}
+
+form input.input-out:not(:focus) {
+  border: 1px solid var(--error-red);
+}
+
+form .error-text {
+  width: 100%;
+  padding: 8px 16px 0 16px;
+  display: none;
+}
+
+form .error-text.active {
+  width: 100%;
+  padding: 8px 16px 0 16px;
+  display: inline-block;
 }
 
 form button {
@@ -78,9 +98,22 @@ form button {
   line-height: 32px;
 }
 
-form button:hover {
+form button.active {
   background: var(--Primary-100);
   border: 1px solid var(--Primary-100);
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+form .error-text {
+  color: var(--error-red);
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 form .pw-box {
@@ -98,10 +131,15 @@ form .pw-box .eyes:hover {
   cursor: pointer;
 }
 
-form .pw-box .eyes .eyes-on {
+form .pw-box .eyes .eyes-icon {
   width: 24px;
   height: 24px;
   display: inline-block;
+  background: url(/img/login/btn_visibility_off.svg) no-repeat;
+  background-size: 100% auto;
+}
+
+form .pw-box .eyes.active .eyes-icon {
   background: url(/img/login/btn_visibility_on.svg) no-repeat;
   background-size: 100% auto;
 }
