@@ -2,6 +2,7 @@
 //fetch 사용, try/catch문 활용
 const PRODUCT_URL = 'https://panda-market-api-crud.vercel.app/products';
 
+//type: (x: object) => void;
 export const getProductList = async (params = {}) => {
   try {
     const url = new URL(`${PRODUCT_URL}`);
@@ -24,6 +25,7 @@ export const getProductList = async (params = {}) => {
   }
 };
 
+//type: (x: number) => void;
 export const getProduct = async (id) => {
   try {
     const res = await fetch(`${PRODUCT_URL}/${id}`);
@@ -38,6 +40,7 @@ export const getProduct = async (id) => {
   }
 };
 
+//type: (x: string, y: string, z: number, q: string[], w: string[]) => void;
 export const createProduct = async ({
   name,
   description,
@@ -63,6 +66,7 @@ export const createProduct = async ({
   }
 };
 
+//type: (x: number, u: object) => void;
 export const patchProduct = async (id, params) => {
   try {
     const res = await fetch(`${PRODUCT_URL}/${id}`, {
@@ -83,6 +87,7 @@ export const patchProduct = async (id, params) => {
   }
 };
 
+//type: (x: number) => void;
 export const deleteProduct = async (id) => {
   try {
     const res = await fetch(`${PRODUCT_URL}/${id}`, {
