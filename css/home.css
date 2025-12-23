@@ -16,6 +16,7 @@ main .contents article {
 }
 
 main .contents article h1 {
+  width: 295px;
   color: var(--Secondary-700);
   font-family: Pretendard;
   font-size: var(--pTr-40);
@@ -39,8 +40,7 @@ main .contents article a {
   line-height: 32px; /* 160% */
 }
 main .contents img {
-  width: 60%;
-  max-width: 746px;
+  width: 746px;
   height: initial;
 }
 
@@ -131,6 +131,7 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
+  position: relative;
 }
 
 footer p,
@@ -185,15 +186,129 @@ li.icon-instargram a {
   background: url(/img/sns/ic_instagram.svg);
 }
 
-@media all and (max-width: 1200px) {
-  main .contents article,
-  main .contents img {
-    width: 50%;
+@media (max-width: 1199px) {
+  /* tablet 사이즈  */
+  main section.contents {
+    height: fit-content;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    padding: 84px 0 0 0;
+    gap: 211px;
+    text-align: center;
   }
 
-  .home article img {
-    width: 50%;
-    max-width: 588px;
-    height: initial;
+  main section.contents img {
+    width: 744px;
+  }
+
+  main section.contents article {
+    gap: 24px;
+    bottom: 0;
+    align-items: center;
+  }
+
+  main section.contents article h1 {
+    width: 100%;
+  }
+
+  section.home {
+    padding: 24px;
+  }
+
+  section.home article {
+    flex-direction: column;
+    gap: 24px;
+    background: none;
+  }
+
+  section.home.search article {
+    flex-direction: column-reverse;
+  }
+
+  section.home article img {
+    width: 100%;
+    height: fit-content;
+  }
+
+  section.home .capter {
+    width: 100%;
+  }
+
+  section.home .capter h2 {
+    font-size: var(--pTr-32);
+    margin: 16px 0 24px 0;
+  }
+
+  section.home .capter p {
+    font-size: var(--pTr-18);
+  }
+
+  main .contents bottom {
+    padding: 201px 0 0 0;
+    gap: 217px;
+  }
+
+  footer {
+    padding: 32px 24px;
+  }
+
+  .br-style {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+  main section.contents {
+    padding: 48px 0 0 0;
+    gap: 132px;
+  }
+
+  main section.contents article h1 {
+    width: 240px;
+    font-size: var(--pTr-32);
+  }
+
+  main section.contents article a {
+    width: 240px;
+    padding: 11px;
+  }
+
+  section.home .capter h2 {
+    margin: 8px 0 16px 0;
+    font-size: var(--ptr-24);
+  }
+
+  section.home .capter h4,
+  section.home .capter p {
+    font-size: var(--ptr-16);
+  }
+
+  section .home {
+    padding: 52px 16px;
+  }
+
+  .no-box {
+    background: #fff;
+    height: 59px;
+  }
+
+  main .contents.bottom {
+    padding: 121px 0 0 0;
+    gap: 71px;
+  }
+
+  main section.contents img {
+    width: calc(100% - 32px);
+  }
+
+  footer {
+    padding: 32px 16px;
+  }
+
+  footer p {
+    position: absolute;
+    bottom: 65px;
   }
 }

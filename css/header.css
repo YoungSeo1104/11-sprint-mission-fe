@@ -38,3 +38,18 @@ header .login {
   font-weight: 600;
   line-height: 26px; /* 162.5% */
 }
+
+@media (max-width: 1199px) {
+  /* tablet 사이즈  */
+
+  header {
+    padding: 12px 24px;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+  header {
+    padding: 12px 16px;
+  }
+}

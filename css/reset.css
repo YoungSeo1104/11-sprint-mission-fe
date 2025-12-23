@@ -146,9 +146,11 @@ button:hover {
 
   /* px To rem */
   --pTr-40: 2.5rem; /* 40px */
+  --pTr-32: 2rem; /* 32px */
   --pTr-24: 1.5rem; /* 24px */
   --pTr-20: 1.25rem; /* 20px; */
   --pTr-18: 1.125rem; /* 18px; */
+  --ptr-16: 1rem; /* 16px */
   --pTr-14: 0.875rem; /* 14px */
 }
 
