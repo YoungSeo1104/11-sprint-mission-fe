@@ -77,7 +77,6 @@ if (loginBtn) {
       Swal.fire({
         text: '비밀번호가 일치하지 않습니다.',
         confirmButtonText: '확인',
-        confirmButtonColor: '#3692FF',
       });
     }
   });
@@ -113,7 +112,6 @@ if (pwInputCheck) {
       Swal.fire({
         text: '사용 중인 이메일입니다.',
         confirmButtonText: '확인',
-        confirmButtonColor: '#3692FF',
       }).then((result) => {
         if (result.isConfirmed) {
           emailInput.value = '';

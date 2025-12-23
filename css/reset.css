@@ -151,3 +151,52 @@ button:hover {
   --pTr-18: 1.125rem; /* 18px; */
   --pTr-14: 0.875rem; /* 14px */
 }
+
+.swal2-container.swal2-backdrop-show {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.swal2-container .swal2-popup.swal2-modal.swal2-show {
+  width: 100%;
+  max-width: 540px;
+  margin: 0;
+  padding: 108px 28px 28px 28px;
+}
+
+.swal2-container .swal2-content .swal2-html-container {
+  color: var(--Cool-Gray-800, #1f2937);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.swal2-container .swal2-actions {
+  margin: 47px 0 0 0;
+  justify-content: flex-end;
+}
+
+.swal2-container .swal2-actions .swal2-styled.swal2-confirm {
+  width: 120px;
+  height: 48px;
+  margin: 0;
+  padding: 12px 23px;
+  border-radius: 8px;
+  background: var(--brand-blue, #3692ff);
+  line-height: 24px;
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+  .swal2-container .swal2-popup.swal2-modal.swal2-show {
+    max-width: 327px;
+    padding: 81px 23px 23px 23px;
+  }
+
+  .swal2-container .swal2-actions {
+    margin: 49px 0 0 0;
+    justify-content: center;
+  }
+}

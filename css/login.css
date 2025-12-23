@@ -4,7 +4,7 @@ body {
 
 .wrap.login-wrapper {
   max-width: 640px;
-  margin: 231px auto 284px auto;
+  margin: 60px auto 284px auto;
 }
 
 .wrap.login-wrapper .login-logo {
@@ -191,4 +191,35 @@ form .pw-box .eyes.active .eyes-icon {
 .singup a {
   color: var(--Primary-100);
   text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+  /* tablet 사이즈  */
+  .wrap.login-wrapper {
+    margin: 48px auto 48px auto;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+  .wrap.login-wrapper {
+    max-width: 343px;
+    margin: 24px auto;
+  }
+
+  .wrap.login-wrapper .login-logo img {
+    max-width: 198px;
+  }
+
+  form input,
+  form button,
+  .sns-login {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrap.login-wrapper {
+    margin: 24px 16px;
+  }
 }
