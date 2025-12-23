@@ -24,7 +24,7 @@ export const USER_DATA = [
   { email: 'codeit6@codeit.com', password: 'codeit606!' },
 ];
 
-// type: (x:string, y:string) => void;
+// type: (x:string, y: HTMLInputElement) => void;
 export const EyesOnOffHandler = (id, input) => {
   const isActive = id.classList.toggle('active');
   if (isActive) {
