@@ -1,89 +1,32 @@
 /*
  * 판다마켓 - 상품 페이지
  */
-
-import { useEffect, useState } from 'react';
-import { ProductService } from '@/api/api';
 import styles from './products.module.css';
 import errorImg from '@/assets/images/error.png';
-import ProductsContext from '@/contexts/ProductsContext';
-// import { Pagination } from '@/components/Pagination';
-// import { Spinner } from '@/components/Spinner';
-// import { usePagination } from '@/hooks/usePagination';
+import { useProductsContext } from '@/contexts/ProductsContext';
+import Spinner from '@/components/Spinner/Spinner';
+import Pagination from '@/components/Pagination/Pagination';
 
 const Products = () => {
-  const getPageSize = () => {
-    if (window.innerWidth > 1199) return 10;
-    if (window.innerWidth > 768) return 6;
-    return 4;
-  };
+  const {
+    isLoading,
+    error,
+    data,
+    bestList,
+    listParams,
+    setListParams,
+    currentPage,
+    totalPages,
+    goToPage,
+  } = useProductsContext();
 
-  const getFavoritePageSize = () => {
-    if (window.innerWidth > 1199) return 4;
-    if (window.innerWidth > 768) return 2;
-    return 1;
-  };
-  const [listParams, setListParams] = useState({
-    page: 1,
-    pageSize: getPageSize(),
-    keyword: '',
-    orderBy: 'recent',
-  });
-  const [data, setData] = useState([]);
-  const [bestParams, setBestParams] = useState({
-    pageSize: getFavoritePageSize(),
-    orderBy: 'favorite',
-  });
-  const [bestList, setBestList] = useState([]);
+  if (isLoading) {
+    return <Spinner />;
+  }
 
-  //판매중인 상품 api
-  useEffect(() => {
-    const fetch = async () => {
-      const res = await ProductService.getProductList(listParams);
-      setData(res);
-    };
-    fetch();
-  }, [listParams]);
-
-  //베스트 상품 api
-  useEffect(() => {
-    const fetch = async () => {
-      const res = await ProductService.getProductList(bestParams);
-      setBestList(res.list);
-    };
-    fetch();
-  }, [bestParams]);
-
-  useEffect(() => {
-    let timer;
-    let prevPageSize = getPageSize(); // 초기값 저장
-
-    const handleResize = () => {
-      clearTimeout(timer);
-
-      timer = setTimeout(() => {
-        const newPageSize = getPageSize();
-
-        if (newPageSize !== prevPageSize) {
-          prevPageSize = newPageSize;
-
-          setListParams((prev) => ({
-            ...prev,
-            pageSize: newPageSize,
-            page: 1,
-          }));
-
-          setBestParams((prev) => ({
-            ...prev,
-            pageSize: getFavoritePageSize(),
-          }));
-        }
-      }, 200);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  if (error) {
+    return <div>에러: {error}</div>;
+  }
 
   return (
     <div className={styles.contents}>
@@ -132,10 +75,9 @@ const Products = () => {
             </select>
           </form>
         </article>
-        {/* <ProductsContext.contents> */}
         <div className={styles.items + ' ' + styles.productItems}>
-          {data.list &&
-            data.list.map((item) => {
+          {data &&
+            data.map((item) => {
               return (
                 <div key={item.id} className={styles.item}>
                   <img
@@ -153,8 +95,13 @@ const Products = () => {
               );
             })}
         </div>
-        {/* </ProductsContext.contents> */}
       </section>
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={goToPage} // Pass goToPage as onPageChange
+      />
     </div>
   );
 };

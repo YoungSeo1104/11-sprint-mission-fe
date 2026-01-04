@@ -1,15 +1,14 @@
 import './styles/App.css';
 import Layout from './layout/Layout';
-import Products from './pages/Products/Products';
+import Products from '@/pages/Products/Products';
 import ProductProvider from './providers/ProductProvider';
 
 function App() {
   return (
     <Layout>
-      {/* <ProductProvider>
+      <ProductProvider>
         <Products />
-      </ProductProvider> */}
-      <Products />
+      </ProductProvider>
     </Layout>
   );
 }

@@ -22,14 +22,14 @@
     transition: all var(--transition-speed) ease-in-out;
 
     &:hover {
-      border-color: var(--primary-color);
-      color: var(--primary-color);
+      border-color: var(--Primary-Color);
+      color: var(--Primary-Color);
     }
 
     &.active {
-      background-color: var(--primary-color);
+      background-color: var(--Primary-Color);
       color: white;
-      border-color: var(--primary-color);
+      border-color: var(--Primary-Color);
       box-shadow: var(--shadow-sm);
     }
   }
