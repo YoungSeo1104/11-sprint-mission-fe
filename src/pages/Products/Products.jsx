@@ -132,28 +132,28 @@ const Products = () => {
             </select>
           </form>
         </article>
-        <ProductsContext.contents>
-          <div className={styles.items + ' ' + styles.productItems}>
-            {data.list &&
-              data.list.map((item) => {
-                return (
-                  <div key={item.id} className={styles.item}>
-                    <img
-                      src={item.images[0] || errorImg}
-                      alt={item.name}
-                      onError={(e) => (e.target.src = errorImg)}
-                    />
-                    <h4>{item.name}</h4>
-                    <h5>{item.price}원</h5>
-                    <p>
-                      <i />
-                      <span>240</span>
-                    </p>
-                  </div>
-                );
-              })}
-          </div>
-        </ProductsContext.contents>
+        {/* <ProductsContext.contents> */}
+        <div className={styles.items + ' ' + styles.productItems}>
+          {data.list &&
+            data.list.map((item) => {
+              return (
+                <div key={item.id} className={styles.item}>
+                  <img
+                    src={item.images[0] || errorImg}
+                    alt={item.name}
+                    onError={(e) => (e.target.src = errorImg)}
+                  />
+                  <h4>{item.name}</h4>
+                  <h5>{item.price}원</h5>
+                  <p>
+                    <i />
+                    <span>240</span>
+                  </p>
+                </div>
+              );
+            })}
+        </div>
+        {/* </ProductsContext.contents> */}
       </section>
     </div>
   );

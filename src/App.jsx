@@ -6,9 +6,10 @@ import ProductProvider from './providers/ProductProvider';
 function App() {
   return (
     <Layout>
-      <ProductProvider>
+      {/* <ProductProvider>
         <Products />
-      </ProductProvider>
+      </ProductProvider> */}
+      <Products />
     </Layout>
   );
 }
