@@ -1,0 +1,134 @@
+.contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px 24px;
+}
+
+h2 {
+  color: var(--Secondary-900, #111827);
+  font-family: Pretendard;
+  font-size: var(--pTr-20);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 160% */
+}
+
+.best h2 {
+  margin: 0 0 16px 0;
+}
+
+.items {
+  display: flex;
+  gap: 24px;
+}
+
+.items img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  margin: 0 0 16px 0;
+}
+
+.item {
+  width: 25%;
+}
+
+.item h4 {
+  color: var(--Secondary-800, #1f2937);
+  font-family: Pretendard;
+  font-size: var(--pTr-14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+
+.item h5 {
+  color: var(--Secondary-800, #1f2937);
+  font-family: Pretendard;
+  font-size: var(--ptr-16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 162.5% */
+  margin: 6px 0;
+}
+
+.item p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.item p i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(@/assets/images/icon/ic_heart.svg);
+  background-size: 100% auto;
+}
+
+.item p span {
+  color: var(--Secondary-600, #4b5563);
+  font-family: Pretendard;
+  font-size: var(--pTr-12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
+}
+
+.product {
+  margin: 0 0 24px 0;
+}
+
+.product article {
+  margin: 40px 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+}
+
+.product .productItems {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.product .productItems .item {
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  /* tablet 사이즈  */
+  .items {
+    gap: 10px;
+  }
+
+  .item {
+    width: 50%;
+  }
+  .product .productItems {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+  .contents {
+    padding: 17px 16px;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .product .productItems {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}

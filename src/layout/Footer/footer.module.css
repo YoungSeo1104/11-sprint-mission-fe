@@ -1,0 +1,84 @@
+footer {
+  display: flex;
+  height: 160px;
+  background: var(--Secondary-900);
+  padding: 32px 200px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+footer p,
+footer .center li {
+  color: var(--Secondary-400);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+footer ul.center {
+  display: flex;
+  gap: 30px;
+}
+
+footer ul.center li a {
+  color: var(--Secondary-200);
+}
+
+footer .icons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  height: 20px;
+  align-items: flex-end;
+}
+
+footer .icons li a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  font-size: 0;
+}
+.iconFacebook a {
+  background: url(@/assets/images/sns/facebook.svg);
+}
+
+.iconTwitter a {
+  background: url(@/assets/images/sns/ic_twitter.svg);
+}
+
+.iconYoutube a {
+  background: url(@/assets/images/sns/youtube.svg);
+}
+
+.iconInstargram a {
+  background: url(@/assets/images/sns/ic_instagram.svg);
+}
+
+@media (max-width: 1199px) {
+  /* tablet 사이즈  */
+
+  footer {
+    padding: 32px 24px;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+
+  footer {
+    padding: 32px 16px;
+  }
+
+  footer p {
+    position: absolute;
+    bottom: 65px;
+  }
+}
